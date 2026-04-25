@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dues Calculator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  font-family: sans-serif;
+  background: #faf7f0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 400px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+button {
+  background: #d4607a;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h2>Dues Calculator</h2>
+
+<input type="number" id="dues" placeholder="Monthly dues"><br><br>
+<input type="number" id="electric" placeholder="% electric"><br><br>
+<input type="number" id="water" placeholder="% water"><br><br>
+
+<button onclick="calc()">Calculate</button>
+
+<p id="result"></p>
+</div>
+
+<script>
+function calc(){
+  let dues = document.getElementById('dues').value;
+  let e = document.getElementById('electric').value;
+  let w = document.getElementById('water').value;
+
+  let electric = dues * (e/100);
+  let water = dues * (w/100);
+
+  document.getElementById('result').innerHTML =
+    "Electric: $" + electric.toFixed(2) + "<br>Water: $" + water.toFixed(2);
+}
+</script>
+
+</body>
+</html>
