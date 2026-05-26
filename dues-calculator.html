@@ -331,13 +331,13 @@ body {
     <div class="logo">🌰</div>
     <div class="page-header-text">
       <h1>Dues Calculator</h1>
-      <p>The Oaks of Woodlake — March 2026 Actuals</p>
+      <p>The Oaks of Woodlake — April 2026 Actuals</p>
     </div>
   </div>
 
   <!-- INTRO -->
   <div class="intro">
-    <p style="margin-top:20px;">We want to provide a clearer picture of how your monthly dues are used and why managing utility usage across our <strong>556 homes</strong> is so important. The Oaks operates on <strong>March 2026 actual expenses of $218,921</strong>, covering utilities, insurance, maintenance, reserves, and contracted services. Utilities alone account for nearly <strong>40%</strong> of all expenses. <em>Enter your monthly dues below to see exactly where every dollar goes.</em></p>
+    <p style="margin-top:20px;">Your monthly dues fund everything that keeps The Oaks running — from utilities and insurance to maintenance, reserves, and contracted services across all <strong>556 homes</strong>. Based on <strong>April 2026 actual expenses of $199,399</strong>, utilities make up nearly <strong>40%</strong> of what we spend each month, making conservation one of the most impactful things our community can do. <em>Enter your dues amount below to see a full breakdown of where every dollar goes.</em></p>
   </div>
 
   <!-- INPUT CARD -->
@@ -362,19 +362,19 @@ body {
   <div class="top-boxes">
     <div class="top-box">
       <div class="top-box-label">Utilities<br>(water, sewer, electric)</div>
-      <div class="top-box-amount" style="color:var(--c1);" id="box1">$295</div>
-    </div>
-    <div class="top-box">
-      <div class="top-box-label">Insurance</div>
-      <div class="top-box-amount" style="color:var(--c3);" id="box2">$150</div>
-    </div>
-    <div class="top-box">
-      <div class="top-box-label">Admin &amp; Management</div>
-      <div class="top-box-amount" style="color:var(--c4);" id="box3">$125</div>
+      <div class="top-box-amount" style="color:var(--c1);" id="box1">$263</div>
     </div>
     <div class="top-box">
       <div class="top-box-label">Contract Services</div>
-      <div class="top-box-amount" style="color:var(--c5);" id="box4">$82</div>
+      <div class="top-box-amount" style="color:var(--c5);" id="box2">$183</div>
+    </div>
+    <div class="top-box">
+      <div class="top-box-label">Admin &amp; Management</div>
+      <div class="top-box-amount" style="color:var(--c4);" id="box3">$92</div>
+    </div>
+    <div class="top-box">
+      <div class="top-box-label">Repairs &amp; Maintenance</div>
+      <div class="top-box-amount" style="color:var(--c6);" id="box4">$52</div>
     </div>
   </div>
 
@@ -402,7 +402,7 @@ body {
     <div class="breakdown-card">
       <div class="breakdown-title">Monthly Breakdown</div>
       <div id="breakdownRows"></div>
-      <div class="breakdown-note">Based on March 2026 actual operating expenses of $218,921 across 556 homes.</div>
+      <div class="breakdown-note">Based on April 2026 actual operating expenses of $199,399 across 556 homes.</div>
     </div>
 
   </div>
@@ -415,18 +415,18 @@ body {
 </div>
 
 <script>
-// March 2026 actual budget categories
-// Total expenses: $218,921
+// April 2026 actual budget categories
+// Total expenses: $199,399
 // Utilities (elec $41,590 + water $45,846): $87,436 = 39.9%
 // Remaining distributed proportionally from budget allocation ratios
 var CATS = [
-  { name: 'Utilities (water, sewer, electricity, gas)', short: 'Utilities', pct: 0.399, color: '#c0453a' },
-  { name: 'Insurance (property, liability, D&O)',       short: 'Insurance', pct: 0.203, color: '#c06878' },
-  { name: 'General & administrative (staff, management)', short: 'Admin',  pct: 0.170, color: '#5a6aa0' },
-  { name: 'Contract services (security, landscaping, trash)', short: 'Contracts', pct: 0.111, color: '#c0983a' },
-  { name: 'Repairs & maintenance',                      short: 'Repairs',  pct: 0.069, color: '#7a7060' },
-  { name: 'Reserves — savings for future major repairs', short: 'Reserves', pct: 0.029, color: '#3a6b45' },
-  { name: 'Taxes & drainage fees',                      short: 'Taxes',    pct: 0.019, color: '#2a2820' },
+  { name: 'Utilities (water, sewer, electricity, gas)', short: 'Utilities', pct: 0.404, color: '#c0453a' },
+  { name: 'Contract services (security, landscaping, trash)', short: 'Contracts', pct: 0.282, color: '#c0983a' },
+  { name: 'General & administrative (staff, management)', short: 'Admin',  pct: 0.142, color: '#5a6aa0' },
+  { name: 'Repairs & maintenance',                      short: 'Repairs',  pct: 0.080, color: '#7a7060' },
+  { name: 'Reserves — savings for future major repairs', short: 'Reserves', pct: 0.042, color: '#3a6b45' },
+  { name: 'Insurance (property, liability, D&O)',       short: 'Insurance', pct: 0.027, color: '#c06878' },
+  { name: 'Taxes & drainage fees',                      short: 'Taxes',    pct: 0.024, color: '#2a2820' },
 ];
 
 // Verify totals
