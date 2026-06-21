@@ -414,20 +414,19 @@ body {
 
 </div>
 
-<script>
-// April 2026 actual budget categories
-// Total expenses: $199,399
-// Utilities (elec $41,590 + water $45,846): $87,436 = 39.9%
-// Remaining distributed proportionally from budget allocation ratios
+<// May 2026 actual operating expense categories
+// Total operating expenses: $164,724
+// Utilities (water/sewer $50,539 + gas $7,448 + phone/internet $2,190): $60,177 = 36.49%
 var CATS = [
-  { name: 'Utilities (water, sewer, electricity, gas)', short: 'Utilities', pct: 0.404, color: '#c0453a' },
-  { name: 'Contract services (security, landscaping, trash)', short: 'Contracts', pct: 0.282, color: '#c0983a' },
-  { name: 'General & administrative (staff, management)', short: 'Admin',  pct: 0.142, color: '#5a6aa0' },
-  { name: 'Repairs & maintenance',                      short: 'Repairs',  pct: 0.080, color: '#7a7060' },
-  { name: 'Reserves — savings for future major repairs', short: 'Reserves', pct: 0.042, color: '#3a6b45' },
-  { name: 'Insurance (property, liability, D&O)',       short: 'Insurance', pct: 0.027, color: '#c06878' },
-  { name: 'Taxes & drainage fees',                      short: 'Taxes',    pct: 0.024, color: '#2a2820' },
+  { name: 'Utilities (water, sewer, electricity, gas)', short: 'Utilities', pct: 0.3649, color: '#c0453a' },
+  { name: 'Contract services (security, landscaping, trash)', short: 'Contracts', pct: 0.3072, color: '#c0983a' },
+  { name: 'General & administrative (staff, management)', short: 'Admin',  pct: 0.1782, color: '#5a6aa0' },
+  { name: 'Repairs & maintenance',                      short: 'Repairs',  pct: 0.0423, color: '#7a7060' },
+  { name: 'Reserves — savings for future major repairs', short: 'Reserves', pct: 0.0506, color: '#3a6b45' },
+  { name: 'Insurance (property, liability, D&O)',       short: 'Insurance', pct: 0.0332, color: '#c06878' },
+  { name: 'Taxes & drainage fees',                      short: 'Taxes',    pct: 0.0230, color: '#2a2820' },
 ];
+  /
 
 // Verify totals
 var totalPct = CATS.reduce(function(s, c) { return s + c.pct; }, 0);
