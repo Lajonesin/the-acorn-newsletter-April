@@ -331,13 +331,13 @@ body {
     <div class="logo">🌰</div>
     <div class="page-header-text">
       <h1>Dues Calculator</h1>
-      <p>The Oaks of Woodlake — January–September 2026 Actuals</p>
+      <p>The Oaks of Woodlake — September 2026 Actuals</p>
     </div>
   </div>
 
   <!-- INTRO -->
   <div class="intro">
-    <p style="margin-top:20px;">Your monthly dues fund everything that keeps The Oaks running — from utilities and insurance to maintenance, reserves, and contracted services across all <strong>556 homes</strong>. Based on <strong>January–September 2026 actual expenses of $2,660,798</strong> (about $295,644 a month), utilities make up nearly <strong>30%</strong> of what we spend, making conservation one of the most impactful things our community can do. <em>Enter your dues amount below to see a full breakdown of where every dollar goes.</em></p>
+    <p style="margin-top:20px;">Your monthly dues fund everything that keeps The Oaks running — from utilities and insurance to maintenance, reserves, and contracted services across all <strong>556 homes</strong>. Based on <strong>September 2026 actual expenses of $182,184</strong>, utilities make up more than <strong>half (53%)</strong> of what we spend each month, making conservation one of the most impactful things our community can do. <em>Enter your dues amount below to see a full breakdown of where every dollar goes.</em></p>
   </div>
 
   <!-- INPUT CARD -->
@@ -401,7 +401,7 @@ body {
     <div class="breakdown-card">
       <div class="breakdown-title">Monthly Breakdown</div>
       <div id="breakdownRows"></div>
-      <div class="breakdown-note">Based on January–September 2026 actual expenses of $2,660,798 across 556 homes. Figures are preliminary and may not be final.</div>
+      <div class="breakdown-note">Based on September 2026 actual expenses of $182,184 across 556 homes. Figures are preliminary and may not be final.</div>
     </div>
 
   </div>
@@ -414,15 +414,15 @@ body {
 </div>
 
 <script>
-// January-September 2026 actual expenses (cash basis, preliminary), from the September 2026 income statement
-// Total expenses: $2,660,797.59
+// September 2026 actual expenses (cash basis, preliminary), from the September 2026 income statement
+// Total expenses: $182,183.95
 var CATS = [
-  { name: 'Utilities (water, sewer, electricity, gas)',   short: 'Utilities', amt: 777480.25, color: '#c0453a' },
-  { name: 'Contract services (security, landscaping, trash)', short: 'Contracts', amt: 368685.00, color: '#c0983a' },
-  { name: 'General & administrative (staff, management)', short: 'Admin', amt: 313758.85, color: '#5a6aa0' },
-  { name: 'Repairs & maintenance',                        short: 'Repairs', amt: 255576.78, color: '#7a7060' },
-  { name: 'Reserves: savings for future major repairs',   short: 'Reserves', amt: 232183.13, color: '#3a6b45' },
-  { name: 'Insurance & taxes',                            short: 'Insurance & taxes', amt: 713113.58, color: '#c06878' }
+  { name: 'Utilities (water, sewer, electricity, gas)',   short: 'Utilities', amt: 95749.15, color: '#c0453a' },
+  { name: 'Contract services (security, landscaping, trash)', short: 'Contracts', amt: 31558.31, color: '#c0983a' },
+  { name: 'General & administrative (staff, management)', short: 'Admin', amt: 34980.20, color: '#5a6aa0' },
+  { name: 'Repairs & maintenance',                        short: 'Repairs', amt: 17512.20, color: '#7a7060' },
+  { name: 'Reserves: savings for future major repairs',   short: 'Reserves', amt: 283.13, color: '#3a6b45' },
+  { name: 'Insurance & taxes',                            short: 'Insurance & taxes', amt: 2100.96, color: '#c06878' }
 ];
 var TOTAL = CATS.reduce(function(s, c) { return s + c.amt; }, 0);
 CATS.forEach(function(c) { c.pct = c.amt / TOTAL; });
